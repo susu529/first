@@ -1,0 +1,44 @@
+.venv/
+env/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+pip-wheel-metadata/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+.ruff_cache/
+*.log
+
+# Local configuration & secrets
+.env
+.env.*
+*.sqlite3
+
+# Frontend dependencies (if added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editors & OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Runtime artefacts
+*.pid
+*.bak
+*.tmp
+

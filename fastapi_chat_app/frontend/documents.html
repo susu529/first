@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档管理 - 甜心助手</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 页面头部 -->
+        <div class="page-header">
+            <h1><i class="fa fa-folder-open"></i> 文档管理</h1>
+            <p>上传和管理您的文档，开始与甜心助手对话</p>
+        </div>
+
+        <!-- 上传面板 -->
+        <div class="upload-panel card">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                    <i class="fa fa-cloud-upload"></i>
+                </div>
+                <div class="upload-text">点击或拖拽文件到此处上传</div>
+                <div class="upload-hint">支持 .txt 格式文件</div>
+                <input type="file" id="fileInput" class="file-input" accept=".txt">
+            </div>
+        </div>
+
+        <!-- 文档列表 -->
+        <div class="documents-list card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h2 style="color: var(--soft-purple); font-size: 20px;">文档列表</h2>
+                <button class="btn btn-secondary" id="refreshBtn">
+                    <i class="fa fa-refresh"></i> 刷新
+                </button>
+            </div>
+            <table class="documents-table">
+                <thead>
+                    <tr>
+                        <th>文件名</th>
+                        <th>上传时间</th>
+                        <th>文本块数量</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="documentsBody">
+                    <!-- 文档列表将通过JavaScript动态添加 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/runtime-config.js"></script>
+    <script type="module" src="js/documents.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甜心助手</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container home-layout">
+        <div class="welcome-card card">
+            <div class="welcome-icon">
+                <i class="fa fa-heart"></i>
+            </div>
+            <h1>欢迎来到甜心助手</h1>
+            <p>一个温暖、贴心的AI助手，帮你快速管理文档与智能对话</p>
+            <ul class="feature-list">
+                <li><i class="fa fa-check-circle"></i> 智能推荐提问，灵感不停歇</li>
+                <li><i class="fa fa-check-circle"></i> 一键语音输入，轻松说出想法</li>
+                <li><i class="fa fa-check-circle"></i> 管理文档、聊天记录，更高效</li>
+            </ul>
+            <div class="nav-buttons auth-required hidden">
+                <a href="chat.html" class="btn btn-primary">
+                    <i class="fa fa-comments"></i> 进入聊天
+                </a>
+                <a href="documents.html" class="btn btn-secondary">
+                    <i class="fa fa-folder-open"></i> 文档管理
+                </a>
+            </div>
+        </div>
+
+        <div class="auth-card card">
+            <div class="auth-header">
+                <div class="avatar-large">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <div>
+                    <h2>登录 / 注册</h2>
+                    <p>登录后即可使用甜心助手的全部功能</p>
+                </div>
+            </div>
+
+            <div class="tab-nav" role="tablist">
+                <button class="tab-button active" data-tab="login" type="button">登录</button>
+                <button class="tab-button" data-tab="register" type="button">注册</button>
+            </div>
+
+            <form id="loginForm" class="auth-form active" autocomplete="on">
+                <div class="form-group">
+                    <label for="loginUsername">用户名</label>
+                    <input type="text" id="loginUsername" name="username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">密码</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="请输入密码" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">登录</button>
+            </form>
+
+            <form id="registerForm" class="auth-form" autocomplete="off">
+                <div class="form-group">
+                    <label for="registerUsername">用户名</label>
+                    <input type="text" id="registerUsername" name="username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">密码</label>
+                    <input type="password" id="registerPassword" name="password" placeholder="至少6位密码" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="registerPasswordConfirm">确认密码</label>
+                    <input type="password" id="registerPasswordConfirm" name="passwordConfirm" placeholder="再次输入密码" required minlength="6">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-block">注册并登录</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>已经登录？<a href="chat.html">立即进入甜心助手</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/runtime-config.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>
+

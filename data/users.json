@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "user_id": "f16808590a34a62c2bba560a",
+      "username": "root",
+      "password_hash": "c08cb06fe2348855bf534ebff1a1db64a5642382ce3ca11287f41f523dabbac5",
+      "salt": "c9bdb8e781cbdfca65b2ff3da10de808",
+      "tokens": [
+        {
+          "token": "5ed1f486c801db489a43fb69fd1cf0ab6debcd3d6104966e",
+          "created_at": 1763034950
+        }
+      ],
+      "created_at": "2025-11-13T11:55:50.763446"
+    }
+  ]
+}

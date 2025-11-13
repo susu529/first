@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天 - 甜心助手</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航栏 -->
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="navbar-avatar">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FF9EBB'/%3E%3Cpath d='M30 45 Q50 35 70 45 Q50 55 30 45' fill='%23FFFFFF'/%3E%3Ccircle cx='40' cy='45' r='3' fill='%236B5B6B'/%3E%3Ccircle cx='60' cy='45' r='3' fill='%236B5B6B'/%3E%3Cpath d='M35 60 Q50 70 65 60' stroke='%236B5B6B' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="甜心助手" class="assistant-avatar-img">
+                </div>
+                <div>
+                    <div class="navbar-title">甜心助手</div>
+                    <div class="navbar-status">
+                        <span class="connection-status disconnected" id="connectionStatus">未连接</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 聊天容器 -->
+        <div class="chat-container">
+            <!-- 推荐问题 -->
+            <div class="recommendations-container" id="recommendationsContainer">
+                <div class="recommendations-empty">加载推荐问题中...</div>
+            </div>
+
+            <!-- 消息容器 -->
+            <div class="messages-container" id="messagesContainer">
+                <!-- 甜心助手欢迎消息 -->
+                <div class="message message-assistant">
+                    <div class="message-content-wrapper">
+                        <div class="message-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FF9EBB'/%3E%3Cpath d='M30 45 Q50 35 70 45 Q50 55 30 45' fill='%23FFFFFF'/%3E%3Ccircle cx='40' cy='45' r='3' fill='%236B5B6B'/%3E%3Ccircle cx='60' cy='45' r='3' fill='%236B5B6B'/%3E%3Cpath d='M35 60 Q50 70 65 60' stroke='%236B5B6B' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="甜心助手" class="message-avatar-img">
+                        </div>
+                        <div class="message-text-wrapper">
+                            <div class="message-bubble">
+                                你好，我是甜心助手，有什么需要帮助的吗
+                            </div>
+                            <div class="message-time">刚刚</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 输入栏 -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="输入消息... (Shift+Enter换行)"
+                        rows="1"
+                    ></textarea>
+                </div>
+                <button id="voiceBtn" class="voice-btn" title="语音输入">
+                    <i class="fa fa-microphone"></i>
+                </button>
+                <button id="sendBtn" class="send-btn" title="发送">
+                    <i class="fa fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/runtime-config.js"></script>
+    <script type="module" src="js/chat.js"></script>
+</body>
+</html>
+
