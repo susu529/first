@@ -77,6 +77,25 @@ python fastapi_chat_app/run.py
 
 ## 部署建议
 
+### Koyeb 部署（推荐）
+
+项目已包含完整的 Koyeb 部署配置，包括 Dockerfile 和详细部署指南。
+
+**快速开始**：
+1. 查看 [Koyeb 部署指南](fastapi_chat_app/KOYEB_DEPLOY.md) 获取详细步骤
+2. 将项目推送到 GitHub
+3. 在 Koyeb 控制台创建服务并连接 GitHub 仓库
+4. 配置环境变量（特别是 `OPENAI_API_KEY`）
+5. 部署完成！
+
+**优势**：
+- 自动 HTTPS
+- 自动部署（GitHub 推送触发）
+- 免费计划可用
+- 支持 Docker 和 Buildpack
+
+### 其他部署选项
+
 - **后端**：可部署到 Render、Railway、Fly.io 或自建服务器。确保提供静态文件与 WebSocket 支持。
 - **前端**：`frontend/` 可直接上传到 Vercel、Netlify 等平台。
 - 若前后端分离部署，请更新 `runtime-config.js` 指向后端域名，并正确配置 CORS。
@@ -101,7 +120,7 @@ python fastapi_chat_app/run.py
 - 引入数据库（PostgreSQL、SQLite 等）替代 JSON 文件，实现多用户并发。
 - 加入单元测试与端到端测试，覆盖关键业务流程。
 - 集成前端构建工具或 UI 框架，优化交互体验。
-- 提供 Dockerfile 与部署脚本，降低新环境搭建成本。
+- ~~提供 Dockerfile 与部署脚本，降低新环境搭建成本。~~ ✅ 已完成
 
 欢迎根据业务需求自由扩展！
 
